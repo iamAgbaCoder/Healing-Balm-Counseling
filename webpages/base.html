@@ -1,0 +1,410 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> {% block title %} {% endblock %} - RCCG Healing Balm Counseling  </title>
+  <!--== Favicon ==-->
+  <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!--== Main Style CSS ==-->
+  <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <!--wrapper start-->
+  <div class="wrapper home-default-wrapper">
+    <!--== Start Preloader Content ==-->
+    <div class="preloader-wrap">
+      <div class="preloader">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!--== End Preloader Content ==-->
+
+    <!--== Start Header Wrapper ==-->
+    <header class="header">
+      <!-- header-middle start -->
+      <div class="header-middle mobile-sticky">
+        <div class="container">
+          <div class="row">
+            <div class="col-11">
+              <div class="header-middle-content">
+                <div class="header-logo d-lg-none">
+                  <a href="/">
+                    <img class="img" src="{% static "assets/img/logo.png" %}" width="100px" alt="Logo" />
+                  </a>
+                </div>
+                <div class="mobile-menu-toggle d-lg-none">
+                  <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
+                    <svg viewBox="0 0 800 600">
+                      <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                        id="top"></path>
+                      <path d="M300,320 L540,320" id="middle"></path>
+                      <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                        id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318)"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header-middle end -->
+
+      <!-- header-bottom start -->
+      <div class="header-bottom d-none d-lg-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <div class="header-logo">
+                  <a href="/">
+                    <img class="sticky-img" src="{% static 'assets/img/logo.png' %}" alt="Logo" />
+                  </a>
+                </div>
+                <ul class="main-menu">
+                  <li class="active">
+                    <a class="main-menu-link" href="/">Home</a>
+                  </li>
+                  <li>
+                    <a class="main-menu-link" href="{% url 'services' %}">Services</a>
+                    <!-- <ul class="sub-menu">
+                      <li>
+                        <a class="sub-menu-link" href="services.html">Services</a>
+                      </li>
+                      <li>
+                        <a class="sub-menu-link" href="service-details.html">Service Details</a>
+                      </li>
+                    </ul> -->
+                  </li>
+
+                  <li>
+                    <a class="main-menu-link" href="blog.html">Blog</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="sub-menu-link" href="blog.html">Blog list</a>
+                      </li>
+                      <li>
+                        <a class="sub-menu-link" href="blog-details.html">Blog Details</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="main-menu-link" href="{% url 'about' %}">About</a>
+                  </li>
+                  <li>
+                    <a class="main-menu-link" href="{% url 'contact' %}">Contact</a>
+                  </li>
+
+                </ul>
+                <a href="get-started.html" class="book-now-btn" style="border-radius: 5px; padding-top: 10px; padding-bottom: 10px;padding-left: 13px; padding-right: 13px;">Get Started</a>
+                <!-- <a href="#" class="book-now-btn" style="border-radius: 5px; padding: 10px; margin-left: 50px;">Login</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header-bottom end -->
+      <!-- header-bottom start -->
+      <div class="header-bottom sticky-header d-none d-lg-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <ul class="main-menu">
+                  <li class="active">
+                    <a class="main-menu-link" href="/">Home</a>
+                  </li>
+                  <li>
+                    <a class="main-menu-link" href="{% url 'services' %}">Services</a>
+                    <!-- <ul class="sub-menu">
+                      <li>
+                        <a class="sub-menu-link" href="services.html">Services</a>
+                      </li>
+                      <li>
+                        <a class="sub-menu-link" href="service-details.html">Service Details</a>
+                      </li>
+                    </ul> -->
+                  </li>
+
+                  <li>
+                    <a class="main-menu-link" href="blog.html">Blog</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="sub-menu-link" href="blog.html">Blog list</a>
+                      </li>
+                      <li>
+                        <a class="sub-menu-link" href="blog-details.html">Blog Details</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="main-menu-link" href="{% url 'about' %}">About</a>
+                  </li>
+                  <li>
+                    <a class="main-menu-link" href="{% url 'contact' %}">Contact</a>
+                  </li>
+
+                </ul>
+                <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;"><strong>GET STARTED</strong></a>
+                <!-- <a href="#" class="book-now-btn">Login</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header-bottom end -->
+    </header>
+
+    <!--== End Header Wrapper ==-->
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!--== Start Footer Area Wrapper ==-->
+    <footer class="footer-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
+              <div class="widget-item">
+                <div class="about-widget">
+                  <a class="footer-logo" href="/">
+                    <img src="{% static 'assets/img/logo.png' %}" alt="Logo" />
+                  </a>
+                  <p class="mb-0">
+                    At our counselling website, we understand the unique challenges that teenagers face and we are here to support you whether you need a listening ear, pratical advice or guidance our team is here to help you thrive
+                  </p>
+                  <ul class="widget-contact-info">
+                    <li class="info-address">
+                      <i class="icofont-location-pin"></i>Redemptioon Camp, KM 46, Redeemption City, Lagos-Ibadan Expressway, Nigeria.
+                    </li>
+                    <li class="info-mail">
+                      <i class="icofont-email"></i><a href="mailto://hello@yourdomain.com">help.rccghealingbalm.com</a>
+                    </li>
+                    <li class="info-phone">
+                      <i class="icofont-ui-call"></i><a href="tel://(123)234567890">(123) 234 567 890 </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 d-lg-none d-xl-block">
+              <div class="widget-item d-inline-block">
+                <h4 class="widget-title line-bottom">Popular Tags</h4>
+                <div class="widget-tags">
+                  <ul>
+                    <li><a href="#/">Teens</a></li>
+                    <li><a href="#/">Cyber Bully</a></li>
+                    <li><a href="#/">Addictions</a></li>
+                    <li><a href="#/">Marriage Counselling</a></li>
+                    <li><a href="#/">Psychology</a></li>
+                    <li><a href="#/">Traumas</a></li>
+                    <li><a href="#/">Depression</a></li>
+                    <li><a href="#/">Parental Guidance</a></li>
+                    <li><a href="#/">Drug Abuse</a></li>
+                    <li><a href="#/">Sexual Harrasment/Abuse</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
+              <div class="widget-item">
+                <h4 class="widget-title line-bottom">Recent Posts</h4>
+                <nav class="widget-posts">
+                  <ul class="posts-item">
+                    <li>
+                      <a href="blog-details.html"><i class="icon icofont-rounded-double-right"></i>Lorem
+                        Ispum dolor sit amet putilor</a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html"><i class="icon icofont-rounded-double-right"></i>Medical is all about
+                        quality.</a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html"><i class="icon icofont-rounded-double-right"></i>Is
+                        your website user friendly ?</a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html"><i class="icon icofont-rounded-double-right"></i>Ai
+                        offer weekly updates & more.</a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html"><i class="icon icofont-rounded-double-right"></i>Customer should love
+                        your web.</a>
+                    </li>
+                    <li>
+                      <a href="blog-details.html"><i class="icon icofont-rounded-double-right"></i>Your
+                        site smooth and stunning.</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 offset-md-1 col-lg-4 offset-lg-0 col-xl-3">
+              <div class="widget-item">
+                <h4 class="widget-title line-bottom">Newsletter</h4>
+                <div class="widget-newsletter">
+                  <p>
+                    Sign up for our mailing list to get latest updates and
+                    offers.
+                  </p>
+                  <form class="newsletter-form input-btn-group">
+                    <input class="form-control" type="text" placeholder="Enter your email" />
+                    <button class="btn btn-theme" type="button">
+                      <i class="icofont-long-arrow-right"></i>
+                    </button>
+                  </form>
+                </div>
+                <div class="widget-social-icons">
+                  <a href="#"><i class="icofont-twitter"></i></a>
+                  <a href="#"><i class="icofont-google-plus"></i></a>
+                  <a href="#"><i class="icofont-pinterest"></i></a>
+                  <a href="#"><i class="icofont-rss"></i></a>
+                  <a href="#"><i class="icofont-facebook"></i></a>
+                  <a href="#"><i class="icofont-dribbble"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-sm-12">
+                <div class="widget-copyright">
+                  <!-- <p>
+                    &copy; 2023 <span class="text-uppercase">RCCG healing balm</span>. Made
+                    with <i class="icofont-heart-alt"></i> by
+                    <a target="_blank" href="#"> RCCG </a>
+                  </p> -->
+                  <p>
+                    &copy; 2023 <span class="text-uppercase">RCCG healing balm</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--== End Footer Area Wrapper ==-->
+  
+      <!-- offcanvas-overlay start -->
+      <div class="offcanvas-overlay"></div>
+      <!-- offcanvas-overlay end -->
+      <!-- offcanvas-mobile-menu start -->
+      <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+        <div class="inner">
+          <div class="border-bottom mb-3 pb-3 text-end">
+            <button class="offcanvas-close">×</button>
+          </div>
+          <div class="offcanvas-head mb-3">
+            <div class="header-top-offcanvas">
+              <p>
+                <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
+                <a href="login.html" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px; border-color: #008000;">Sign In</a>
+              </p>
+            </div>
+          </div>
+          <nav class="offcanvas-menu">
+            <ul>
+              <li>
+                <a href="/"><span class="menu-text">Home</span></a>
+              </li>
+              <li>
+                <a href="{% url 'services' %}"><span class="menu-text">Services</span></a>
+<!--                 <ul class="offcanvas-submenu">
+                  <li>
+                    <a href="services.html">Service</a>
+                  </li>
+                  <li>
+                    <a href="service-details.html">service details</a>
+                  </li>
+                </ul> -->
+              </li>
+  
+              <li>
+                <a href="blog.html"><span class="menu-text">blog</span></a>
+              </li>
+  
+              <li>
+                <a href="{% url 'about' %}">about</a>
+              </li>
+  
+              <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="offcanvas-social my-4">
+            <ul>
+              <li>
+                <a href="#"><i class="icofont-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icofont-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icofont-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icofont-rss-feed"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icofont-play-alt-1"></i></a>
+              </li>
+            </ul>
+          </div>
+  
+          
+      <!-- offcanvas-mobile-menu end -->
+  
+      <!--== Scroll Top Button ==-->
+      <div class="scroll-to-top"><span class="icofont-rounded-up"></span></div>
+    </div>
+  
+    <!--=======================Javascript============================-->
+  
+    <!--=== Modernizr Min Js ===-->
+    <script src="{% static 'assets/js/modernizr.js' %}"></script>
+    <!--=== jQuery Min Js ===-->
+    <script src="{% static 'assets/js/jquery-main.js' %}"></script>
+    <!--=== jQuery Migration Min Js ===-->
+    <script src="{% static 'assets/js/jquery-migrate.js' %}"></script>
+    <!--=== Popper Min Js ===-->
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!--=== jquery UI Min Js ===-->
+    <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+    <!--=== Plugin Collection Js ===-->
+    <script src="{% static 'assets/js/plugincollection.js' %}"></script>
+  
+    <script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.countup.js' %}"></script>
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+  
+    <!--=== Custom Js ===-->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+  </body>
+  
+  </html>

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Who We Are {% endblock title %}
+
+{% block content %}
+
+    <main class="main-content site-wrapper-reveal">
+      <!--== Start Page Title Area ==-->
+      <section class="page-title-area bg-img bg-img-top" data-bg-img="{% static "assets/img/photos/about-bg1.jpg" %}">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 m-auto">
+              <div class="page-title-content content-style5 text-center">
+                <p>RCCG Healing Balm</p>
+                <h4 class="title">About <span>Healing Balm</span></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--== End Page Title Area ==-->
+
+      <!--== Start About Area Wrapper ==-->
+      <section class="about-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="title"><span style="color: #008000">About Us</span></h3>
+              <p class="text-pra">Welcome to Healing Balm, a sanctuary of solace and spiritual healing. Our mission is to make professional therapy <span style="text-decoration: underline; text-decoration-color: #008000; text-underline-offset: 5px; text-decoration-thickness: 3px;">accessible</span>, <span style="text-decoration: underline; text-decoration-color: #008000; text-underline-offset: 5px; text-decoration-thickness: 3px;">affordable</span>, and <span style="text-decoration: underline; text-decoration-color: #008000; text-underline-offset: 5px; text-decoration-thickness: 3px;">convenient</span> - so anyone who struggles with life's challenges can get help anytime <span style="text-decoration: underline; text-decoration-color: #008000; text-underline-offset: 5px; text-decoration-thickness: 3px;">anywhere</span>.</p>
+
+              <div class="service-list-content">
+                <h4 class="title" style="color: #008000;">Who We Are</h4>
+                <p class="text-block">Healing Balm is a community of compassionate and devoted individuals committed to serving as a source of spiritual counsel and support. We are a diverse group of counselors, pastors, and spiritual leaders, each with our unique backgrounds, experiences, and perspectives. What unites us is a shared dedication to helping people find strength, solace, and spiritual healing during their most trying times.</p>
+              </div>
+
+              <div class="service-list-content">
+                <h4 class="title" style="color: #008000;">Our Vision</h4>
+                <p class="text-block">To create a safe and nurturing environment where children and teenagers in RCCG Continent 3 Junior Church can find solace, guidance, and support through our counseling service, empowering them to overcome challenges, develop their full potential, and embrace a vibrant relationship with God.</p>
+              </div>
+
+              <div class="service-list-content">
+                <h4 class="title" style="color: #008000;">Our Approach</h4>
+                <p class="text-block">At Healing Balm, we recognize that every person's journey is unique, and the path to healing may be different for each individual. That's why we provide a safe and non-judgmental space for you to explore your thoughts, feelings, and spiritual questions. Our approach is rooted in the following principles:</p>
+                <p><span style="color: #008000; font-weight: bold;">Compassion and Empathy: </span>We offer a compassionate ear and a caring heart to support you through your challenges, helping you find comfort and understanding.</p>
+                <p><span style="color: #008000; font-weight: bold;">Faith-Centered Guidance:  </span>Our counseling is deeply rooted in faith, but we welcome individuals from all religious backgrounds or none at all. Our aim is to help you find spiritual meaning and connection in your life.</p>
+                <p><span style="color: #008000; font-weight: bold;">Holistic Healing: </span>We believe in the importance of addressing the whole person - mind, body, and spirit. Our counseling integrates spiritual and psychological aspects for comprehensive healing.</p>
+              </div>
+                
+              <div class="office-center-content">
+                <h4 class="title">Our center</h4>
+                <p>It was shaped like a chair and sparkled with gems, as did everything else. In the center of the chair
+                  was an enormous Head, without a body to support it or any arms or legs whatever.</p>
+                <div class="row">
+                  {% for picture in picture_excerpts %}                  
+                  <div class="col-md-6">
+                    <div class="gallery-item mb-30">
+                      <div class="thumb">
+                        <a class="lightbox-image" data-fancybox="gallery" href="{{picture.image.url}}">
+                          <img src="{{picture.image.url}}" alt="Image">
+                        </a>
+                        <div class="overlay"><i class="icofont-plus"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="office-address-content">
+                  <div class="office-address-item">
+                    <h5>REDEMPTION CAMP</h5>
+                    <ul>
+                      <li class="info-address">KM 46 Lagos-Ibadan expressway, Mowe, Ogun State, Nigeria</li>
+                      <li class="info-phone">123 4567 890</li>
+                      <li class="info-mail">info@rccghealingbalm.com</li>
+                    </ul>
+                  </div>
+                  <div class="office-address-item">
+                    <h5>Newyork</h5>
+                    <ul>
+                      <li class="info-address">3rd Floor, 692 Orchard St, NY 10000, Newyork</li>
+                      <li class="info-phone">+04200 4739 6899 6880</li>
+                      <li class="info-mail">office@hope.com</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--== End About Area Wrapper ==-->
+    </main>
+
+{% endblock content %}

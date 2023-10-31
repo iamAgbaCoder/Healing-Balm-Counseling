@@ -1,0 +1,655 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home {% endblock title %}
+{% block content %}
+
+    <main class="main-content site-wrapper-reveal">
+      <!--== Start Hero Area Wrapper ==-->
+      <section class="hero-slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- swiper-slide start -->
+            <div class="swiper-slide" data-bg-img="{% static "assets/img/slider/banner1.jpg" %}">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="slider-content">
+                      <p class="text animated delay1" style="font-family: 'Poppins', sans-serif; font-weight:300;">
+                        feel the difference with us
+                      </p>
+                      <h2 class="title animated delay2" style="font-family: 'Poppins', sans-serif;">
+                        Your Health Is
+                        <span class="d-block">Our Priority</span>
+                      </h2>
+                      <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
+                      <a href="#feature" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Sign In</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- swiper-slide end -->
+            <!-- swiper-slide start -->
+            <div class="swiper-slide" data-bg-img="{% static 'assets/img/slider/ab.jpg' %}">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="slider-content">
+                      <p class="text animated delay1">
+                        feel the difference with us
+                      </p>
+                      <h2 class="title animated delay2">
+                        Empowering Lives through Compassionate
+                        <span class="d-block"> Counseling</span>
+                      </h2>
+                      <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
+                      <a href="#" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Sign In</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- swiper-slide end -->
+          </div>
+
+          <div class="swiper-button-prev">
+            <i class="icofont-arrow-left"></i>
+          </div>
+          <div class="swiper-button-next">
+            <i class="icofont-arrow-right"></i>
+          </div>
+        </div>
+      </section>
+      <!--== End Hero Area Wrapper ==-->
+
+      <section class="pricing-area pricing-default-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
+                <p style="font-size: 15px;" >You deserve to be happy</p>
+                <h2 class="title">
+                  <span>How</span> it works
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row row-gutter-0 pricing-items-style1" data-aos="fade-up" data-aos-duration="1100">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="pricing-item item-one">
+                <div class="pricing-title">
+                  <h5>Step 1</h5>
+                </div>
+                <div class="pricing-amount">
+                  <h2 style="color:#008000;">Schedule a session that fits your schedule and needs.</h2>
+                </div>
+                <div class="pricing-content">
+                  <p class="desc">
+                    We believe that everyone deserves the opportunity to prioritize their mental and emotional well-being, and our flexible scheduling options make it easier than ever to take that crucial step towards self-care and personal growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="pricing-item item-one">
+                <div class="pricing-title">
+                  <h5>Step 2</h5>
+                </div>
+                <div class="pricing-amount">
+                  <h2 style="color:#008000;">Discover the ideal therapist tailored to your needs</h2>
+                </div>
+                <div class="pricing-content">
+                  <p class="desc">
+                    Complete a brief questionnaire to connect with a licensed therapist perfectly suited to your requirements and preferences. Access the extensive network of accredited professionals.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="pricing-item item-two">
+                <div class="pricing-title">
+                  <h5>Step 3</h5>
+                </div>
+                <div class="pricing-amount">
+                  <h2 style="color:#008000;">Express yourself in your preferred manner.</h2>
+                </div>
+                <div class="pricing-content">
+                  <p class="desc">
+                    Complete a brief questionnaire to connect with a licensed therapist perfectly suited to your requirements and preferences. Access the extensive network of accredited professionals.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="pricing-item item-three">
+                <div class="pricing-title">
+                  <h5>Step 4</h5>
+                </div>
+                <div class="pricing-amount">
+                  <h2 style="color:#008000;">Access therapy when it's most convenient for you</h2>
+                </div>
+                <div class="pricing-content">
+                  <p class="desc">
+                    Connect with your therapist using the communication method that suits you best: text, chat, phone, or video.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="static-media" id="stats">
+        <div class="container" style="align-content: center;" data-aos="fade-up" data-aos-duration="1100">
+          <div class="row stats-con">
+            <div class="col-lg-3 col-6 stats_info counter_grid">
+              <span class="icofont-users" style="font-size: 70px; text-align: center; color:#008000;"></span>
+              <p class="counter" style="font-size: 50px">1100</p>
+              <h4>Expert <span style="color:#008000;">Counsellors</span></h4>
+            </div>
+            <div class="col-lg-3 col-6 stats_info counter_grid1">
+              <span class="icofont-laptop" style="font-size: 70px; color:#008000;"></span>
+              <p class="counter" style="font-size: 50px">1020</p>
+              <h4>Health <span style="color:#008000;">Programs</span></h4>
+            </div>
+            <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
+              <span class="icofont-people" style="font-size: 70px; color:#008000;"></span>
+              <p class="counter" style="font-size: 50px">912</p>
+              <h4>Happy <span style="color:#008000;">Clients</span></h4>
+            </div>
+            <div class="col-lg-3 col-6 stats_info counter_grid2 mt-lg-0 mt-5">
+              <span class="icofont-trophy" style="font-size: 70px; color:#008000;"></span>
+              <p class="counter"style="font-size: 50px">80</p>
+              <h4>Success <span style="color:#008000;">Meets</span></h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--== Start Feature Area Wrapper ==-->
+      <section class="feature-section" data-bg-color="#fff" id="feature">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title" data-aos="fade-up" data-aos-duration="1100">
+                <p>Why Choose Healing Balm</p>
+                <h2 class="title"><span style="color: #008000;">Your Ultimate Choice</span> For Enhanced Well-being</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-xl-8">
+              <div class="row icon-box-style" data-aos="fade-up" data-aos-duration="1100">
+                <div class="col-md-6">
+                  <div class="icon-box-item">
+                    <div class="icon">
+                      <i class="bi bi-people" style="color: #008000"></i>
+                    </div>
+                    <div class="content">
+                      <h5 class="title">Professional Counseling</h5>
+                      <p>
+                         At Healing Balm, we believe in the transformative power of professional counseling. Our team of licensed and experienced therapists are here to listen, understand, and guide you through your unique journey to healing and personal growth.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="icon-box-item">
+                    <div class="icon">
+                      <i class="bi bi-person-video3" style="color: #008000"></i>
+                    </div>
+                    <div class="content">
+                      <h5 class="title">Seamless & Convenient Virtual Sessions</h5>
+                      <p>
+                        With Healing Balm, you can access professional counseling from the comfort and privacy of your own space. Say goodbye to commuting and waiting rooms, and say hello to therapy sessions that fit your schedule. You can access your session from the comfort of your home, office, or any private space of your choice. No need to worry about travel time or traffic – we bring the counseling session to you.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="icon-box-item">
+                    <div class="icon">
+                      <i class="bi bi-fingerprint" style="color: #008000"></i>
+                    </div>
+                    <div class="content">
+                      <h5 class="title">Safe and Secure</h5>
+                      <p>
+                        Your privacy and confidentiality are our top priorities. Healing Balm's secure platform ensures that your personal information and sessions remain confidential.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="icon-box-item">
+                    <div class="icon">
+                      <i class="bi bi-clock-history" style="color: #008000"></i>
+                    </div>
+                    <div class="content">
+                      <h5 class="title">24/7 Support and Counseling Services</h5>
+                      <p>
+                        Our commitment to providing 24-hour services means that you can seek professional guidance, support, and assistance whenever you need it, without any time constraints.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="icon-box-item">
+                    <div class="icon">
+                      <i class="bi bi-chat-quote" style="color: #008000"></i>
+                    </div>
+                    <div class="content">
+                      <h5 class="title">Feedbacks and Reviews</h5>
+                      <p>
+                        Client reviews provide valuable insights into the experiences of individuals who have used our counseling services this platform. Prospective clients can read these reviews to gain a better understanding of what to expect from a particular counselor or the platform as a whole. This information empowers them to make informed decisions when selecting a counselor who aligns with their needs and preferences.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="icon-box-item">
+                    <div class="icon">
+                      <!-- <i class="icofont-"></i> -->
+                      <i class="bi bi-bookmark-heart" style="color: #008000"></i>
+                    </div>
+                    <div class="content">
+                      <h5 class="title">Community Building & Resources Library</h5>
+                      <p>
+                        Healing Balm offers a wide range of educational materials related to mental health, emotional well-being, and personal growth. Also includes a discussion forum or community space where users can engage in conversations related to the resources they access, fostering a sense of community and support.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb" data-aos="fade-left" data-aos-duration="1500">
+          <img src="{% static "assets/img/img2.png" %}" alt="image" />
+        </div>
+      </section>
+
+
+      <!--== End Feature Area Wrapper ==-->
+
+      <!--== Start Appointment Form Area Wrapper ==-->
+      <section class="appointment-area" data-bg-color="#f3f3f3" id="appointment">
+        <div class="appointment-form-style1">
+          <div class="container">
+            <div class="row">
+              
+                
+              <div class="col-12">
+                <div class="contact-form">
+                  <div class="section-title">
+                    <br>
+                    <br>
+                    <p>We Alway Ready Helps you</p>
+                    <h2 class="title"><span>Book An</span> Appointment</h2>
+                  </div>
+                  <!-- Message Notification -->
+                  <div class="message">
+                    <div class="container">
+                      {% if messages %}
+                          {% for message in messages %}
+                          {% if message.tags == "error" %}
+                          <div class="alert alert-danger" role="alert">
+                          {% else %}
+                          <div class="alert alert-{{ message.tags }}" role="alert">
+                          {% endif %}
+                            <button type='button' style="margin-left: 95%;" class='btn-close' data-bs-dismiss='alert'></button>
+                            {% comment %} <h4 class="alert-heading">Book Appointment</h4> {% endcomment %}
+                            <p>{{message}}.</p>
+                            <hr>
+                            <p class="mb-0"><strong>RCCG Healing Balm Team.</strongbhz></p>
+                          </div>
+                          {% endfor %}
+                      {% endif %}
+                    </div>
+            
+                  </div>
+                  <form
+                    
+                    class="contact-form-wrapper"
+                    id="contact-form"
+                    action="{% url "home" %}"
+                    method="post"
+                  >
+                  {% csrf_token %}
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <input
+                            class="form-control"
+                            type="text"
+                            name="name"
+                            placeholder="Your Name*"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <input
+                            class="form-control"
+                            type="email"
+                            name="email"
+                            placeholder="Email Address*"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">          
+                          <select id="department" class="form-control" name="gender" required="select gender">
+                            <option value="None">Gender <span style="color: #008000">*</span></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Transgender">Transgender</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <input
+                            class="form-control"
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone*"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">          
+                          <select id="department" class="form-control" name="age" required="Specialization">
+                            <option value="None">Age Range <span style="color: #008000">*</span></option>
+                            <option value="Kids and Teenagers">Kids and Teenagers</option>
+                            <option value="Youths/Young Adul">Youths/Young Adult</option>
+                            <option value="Couple">Couple</option>
+                            <option value="Adults">Adults</option>
+                            <option value="Elders">Elders</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">          
+                          <select id="department" class="form-control" name="challenge" required="">
+                            <option value="None">Challenges <span style="color: #008000">*</span></option>
+                            <option value="Stress or Anxiety">Stress or Anxiety</option>
+                            <option value="Depression">Depression</option>
+                            <option value="School challenges">School challenges</option>
+                            <option value="ADHD/ADD">ADHD/ADD</option>
+                            <option value="Addiction">Addiction</option>
+                            <option value="Trauma or Abuse">Trauma or Abuse</option>
+                            <option value="Loss of Loved ones">Loss of Loved ones</option>
+                            <option value="Anger Issues">Anger Issues</option>
+                            <option value="Fears or Phobias">Fears or Phobias</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <input
+                            class="form-control"
+                            type="date"
+                            name="date"
+                            placeholder="Date"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-12 text-center">
+                        <div class="form-group mb-0">
+                          <button class="btn btn-theme btn-block" type="submit">
+                            Book Appointment &rarr;
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--== End Appointment Form Area Wrapper ==-->
+
+      
+
+      <!--== Start Testimonial Area Wrapper ==-->
+      <section class="testimonial-area testimonial-default-area bg-img"
+        data-bg-img="{% static "assets/img/photos/testimonial-bg1.jpg" %}">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
+                <p>Testimonies</p>
+                <h2 class="title"><span>A Success</span> Story</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="swiper-container testimonial-slider-container" data-aos="fade-up" data-aos-duration="1100">
+                <div class="swiper-wrapper testimonial-slider">
+                  <!--== Start Testimonial Item ==-->
+                  {% for testimony in testimonies %}
+                  <div class="swiper-slide testimonial-item">
+                    <div class="thumb">
+                      <img src="{{testimony.image.url}}" alt="Image" />
+                    </div>
+                    <div class="client-location">
+                      <p style="color: black;">
+                        “ {{testimony.testimony}} ”
+                      </p>
+                    </div>
+                    <div class="client-info">
+                      <div class="desc">
+                        <h4 class="name"> {{testimony.name}} </h4>
+                        <p class="client-location">
+                          {{testimony.location}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  <!--== End Testimonial Item ==-->
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--== End Testimonial Area Wrapper ==-->
+
+      <!--== Start Team Area Wrapper ==-->
+      <section class="team-area team-default-area" data-bg-color="#f3f3f3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
+                <p>Meet Our Counsellors & Specialists</p>
+                <h2 class="title">
+                  <span>Professional &</span> Enthusiastic
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="swiper-container team-slider-container" data-aos="fade-up" data-aos-duration="1300">
+                <div class="swiper-wrapper team-slider">
+                  <!--== Start Team Item ==-->
+                  {% for counselor in counsellors %}
+                  <div class="swiper-slide team-member">
+                    <div class="thumb">
+                      <img src="{{counselor.image.url}}" alt="{{counselor.name}}" />
+                    </div>
+                    <div class="content">
+                      <div class="member-info">
+                        <h4 class="name">{{counselor.name}}</h4>
+                        <p>
+                          {{counselor.short_bio}}
+                        </p>
+                        {% comment %} <a href="#" class="btn-link">Read More</a> {% endcomment %}
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  <!--== End Team Item ==-->
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="brand-logo-area brand-logo-default-area">
+                <div class="swiper-container brand-logo-slider-container" data-aos="fade-up" data-aos-duration="1200">
+                  <div class="swiper-wrapper brand-logo-slider">
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/01.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/02.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/03.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/04.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/05.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!--== End Team Area Wrapper ==-->
+
+
+      <!--== Start Blog Area Wrapper ==-->
+      <section class="blog-area blog-default-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="section-title mt-md-70" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="title"><span>FAQs</span></h2>
+              </div>
+              <div class="accordian-content" data-aos="fade-up" data-aos-duration="1100">
+                <div class="accordion accordion-style2 no-bg" id="accordionStyle">
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Can I Get A Divorce Without A Consultant?
+                        <i class="icon icon-plus icofont-thin-down"></i>
+                        <i class="icon icon-minus icofont-close-line"></i>
+                      </button>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                      data-bs-parent="#accordionStyle">
+                      <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Curabitur consectetur elit lacinia ornare. In
+                        volutpat rutrum molestie. Vivamus efficitur orci, ac
+                        gravida eros bibendum non. Nullam auctor varius fer
+                        vestibulum ante ipsum primis in faucibus orci luctus
+                        et ultrices.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        I Have A Technical Problem Or Support Issue I Need
+                        Resolved, Who Do I Email?
+                        <i class="icon icon-plus icofont-thin-down"></i>
+                        <i class="icon icon-minus icofont-close-line"></i>
+                      </button>
+                    </div>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionStyle">
+                      <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Curabitur consectetur elit lacinia ornare. In
+                        volutpat rutrum molestie. Vivamus efficitur orci, ac
+                        gravida eros bibendum non. Nullam auctor varius fer
+                        vestibulum ante ipsum primis in faucibus orci luctus
+                        et ultrices.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What Other Services Are You Compatible With?
+                        <i class="icon icon-plus icofont-thin-down"></i>
+                        <i class="icon icon-minus icofont-close-line"></i>
+                      </button>
+                    </div>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionStyle">
+                      <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Curabitur consectetur elit lacinia ornare. In
+                        volutpat rutrum molestie. Vivamus efficitur orci, ac
+                        gravida eros bibendum non. Nullam auctor varius fer
+                        vestibulum ante ipsum primis in faucibus orci luctus
+                        et ultrices.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Are You Hiring?
+                        <i class="icon icon-plus icofont-thin-down"></i>
+                        <i class="icon icon-minus icofont-close-line"></i>
+                      </button>
+                    </div>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                      data-bs-parent="#accordionStyle">
+                      <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Curabitur consectetur elit lacinia ornare. In
+                        volutpat rutrum molestie. Vivamus efficitur orci, ac
+                        gravida eros bibendum non. Nullam auctor varius fer
+                        vestibulum ante ipsum primis in faucibus orci luctus
+                        et ultrices.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-line" href="#/">View All Questions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--== End Blog Area Wrapper ==-->
+    </main>
+
+{% endblock %}
+
+    

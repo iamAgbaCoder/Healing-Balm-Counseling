@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} What We Do {% endblock %}
+
+{% block content %}
+
+  <main class="main-content site-wrapper-reveal">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img bg-img-top" data-bg-img="{% static 'assets/img/slider/main-slide-01.jpg' %}">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xl-7 m-auto">
+            <div class="page-title-content content-style2 text-center">
+              <p>Compassionate Guidance for Life's Challenges</p>
+              <h4 class="title">Services <span>That We Provide</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Page Title Area ==-->
+
+    <!--== Start Service Area Wrapper ==-->
+    <section class="service-area">
+      <div class="container">
+        <div class="row">
+          <h3 class="title"><span style="color: black;">Services at Healing Balm</span></h3>
+          <p class="text-pra">At Healing Balm, we offer a range of services designed to provide you with the support, guidance, and healing you need to navigate life's challenges and find solace for your soul. Our services are rooted in faith and compassion, and they cater to a wide range of individual needs</p>
+          <div class="col-lg-12">   
+            <div class="section-title text-center">
+              <p>Our services</p>
+              <h2 class="title"><span>Overview of services we provide</span> For Your Health</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row service-style2">
+              <div class="col-sm-6 col-md-6 col-lg-3 service-item">
+                <div class="icon">
+                  <i class="bi bi-person-lines-fill"></i>
+                </div>
+                <div class="content">
+                  <h5 class="service-name">Counseling Services</h5>
+                  <p>Our compassionate counselors are here to listen, empathize, and help you work through your personal challenges. Whether you're facing grief, anxiety, relationship issues, or other life difficulties, our counselors provide a safe and non-judgmental space for you to explore your thoughts and emotions</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 service-item">
+                <div class="icon">
+                  <i class="bi bi-peace-fill"></i>
+                </div>
+                <div class="content">
+                  <h5 class="service-name">Spiritual Guidance</h5>
+                  <p>Our spiritual leaders offer guidance and support for those seeking a deeper connection with their faith. We can help you explore your beliefs, answer spiritual questions, and provide insights to strengthen your spiritual journey.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 service-item">
+                <div class="icon">
+                  <i class="bi bi-people"></i>
+                </div>
+                <div class="content">
+                  <h5 class="service-name">Support Groups</h5>
+                  <p>Connect with others who are going through similar experiences in our supportive community groups. Sharing your challenges with a network of understanding individuals can be a powerful step towards healing and personal growth.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 service-item">
+                <div class="icon">
+                  <i class="bi bi-calendar-event"></i>
+                </div>
+                <div class="content">
+                  <h5 class="service-name">Workshops and Seminars</h5>
+                  <p>Participate in our workshops and seminars covering a range of topics, including grief, forgiveness, self-discovery, and more. These events provide valuable insights, tools, and a sense of community to help you on your path to healing.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 service-item">
+                <div class="icon">
+                  <i class="bi bi-gear-fill"></i>
+                </div>
+                <div class="content">
+                  <h5 class="service-name">Specialized Programs</h5>
+                  <p>We offer specialized programs tailored to address specific needs such as addiction recovery, marriage enrichment, and youth counseling. These programs are designed to address unique challenges and offer targeted support.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3 service-item">
+                <div class="icon">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <div class="content">
+                  <h5 class="service-name">Online Services</h5>
+                  <p>For those who may be unable to attend in person, we provide online counseling and guidance services, ensuring you can access support wherever you are.</p><!-- 
+                  <a class="btn-link" href="service-details.html">More <i class="icofont-simple-right"></i></a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Service Area Wrapper ==-->
+
+    <!--== Start Testimonial Area Wrapper ==-->
+    <section class="testimonial-area testimonial-default-area bg-img" data-bg-img="{% static 'assets/img/photos/testimonial-bg1.jpg' %}">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title text-center">
+              <p>Testimonial</p>
+              <h2 class="title"><span>Trusted</span> From Clients</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="swiper-container testimonial-slider-container">
+              <div class="swiper-wrapper testimonial-slider">
+                <!--== Start Testimonial Item ==-->
+                {% for testimony in testimonies %}
+                <div class="swiper-slide testimonial-item">
+                  <div class="thumb">
+                    <img src="{{testimony.image.url}}" alt="{{testimony.name}}">
+                  </div>
+                  <div class="client-content">
+                    <p>“ {{testimony.testimony}} ”</p>
+                  </div>
+                  <div class="client-info">
+                    <div class="desc">
+                      <h4 class="name">{{testimony.name}}</h4>
+                      <p class="client-location">{{testimony.location}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+                <!--== End Testimonial Item ==-->
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="brand-logo-area brand-logo-default-area">
+              <div class="swiper-container brand-logo-slider-container">
+                <div class="swiper-wrapper brand-logo-slider">
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/01.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/02.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/03.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/04.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                    <div class="swiper-slide brand-logo-item">
+                      <a href="#/"><img src="{% static "assets/img/brand-logo/05.png" %}" alt="hope-Brand-Logo" /></a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Testimonial Area Wrapper ==-->
+
+
+    <!--== Start Divider Area Wrapper ==-->
+    <section class="divider-area" style="background-color: #008000;">
+      <div class="container">
+        <div class="row content-align-center">
+          <div class="col-lg-12">
+            <div class="divider-content-area divider-content-style1">
+              <div class="content-inner">
+                <h2>Book An <span>Appointment</span></h2>
+                <p>We have a dedicated 24/7 support service for any your question</p>
+              </div>
+              <a href="{% url "home" %}#appointment" class="btn btn-theme btn-white">Reservation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Divider Area Wrapper ==-->
+  </main>
+
+ {% endblock %}
