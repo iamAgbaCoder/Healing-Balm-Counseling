@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os 
 
+# from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -50,6 +53,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    # Multilingual Feature 
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'HealingBalm.urls'
@@ -111,9 +117,24 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+USE_L10N = True
+
 
 USE_TZ = True
 
+# Supported Languages 
+LANGUAGES = [
+    ('en', _('English')),
+    ('fr', _('French')),
+    # Add more languages as needed
+]
+
+LANGUAGE_CODE = 'en'  # Default language
+
+# path where translated files will be stored 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'), # default is "locale"
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

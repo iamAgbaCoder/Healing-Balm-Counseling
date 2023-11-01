@@ -1,9 +1,53 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load i18n %}
 
+{% load l10n %}
+
+{% load tz %}
 {% block title %}Home {% endblock title %}
 {% block content %}
+
+{% comment %} {% if show_toast %}
+  <div class="position-fixed top-0 end-0 p-3" id="toast-container">
+    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
+      <div class="toast-header">
+        <img src="{% static 'assets/img/logo.png' %}" class="rounded mr-2" alt="...">
+        <strong class="mr-auto"> RCCG Healing Balm </strong>
+        <small>Just Now</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        {{show_toast}}
+      </div>
+    </div>
+    </div>
+  </div>
+  {% endif %} {% endcomment %}
+    <div class="message">
+      <div class"container">
+        <div id="toast-container" class="position-fixed top-0 end-0 p-3"></div>   
+          {% if show_toast %}
+          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+              <div class="toast-header">
+                  <strong class="me-auto">Notification</strong>
+                  <small class="text-muted">just now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                  {{ show_toast }}
+              </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Message Notification -->
+  <!-- <div class="message"> -->
 
     <main class="main-content site-wrapper-reveal">
       <!--== Start Hero Area Wrapper ==-->
@@ -83,7 +127,8 @@
                   <h5>Step 1</h5>
                 </div>
                 <div class="pricing-amount">
-                  <h2 style="color:#008000;">Schedule a session that fits your schedule and needs.</h2>
+                  <h2 style="color:#008000;">{% trans "Schedule a session that fits your schedule and needs." %}</h2>
+                  {% comment %} <h2>{% translate "Welcome to our website" %}</h1> {% endcomment %}
                 </div>
                 <div class="pricing-content">
                   <p class="desc">
@@ -289,7 +334,7 @@
                     <h2 class="title"><span>Book An</span> Appointment</h2>
                   </div>
                   <!-- Message Notification -->
-                  <div class="message">
+                  <!-- <div class="message">
                     <div class="container">
                       {% if messages %}
                           {% for message in messages %}
@@ -305,10 +350,9 @@
                             <p class="mb-0"><strong>RCCG Healing Balm Team.</strongbhz></p>
                           </div>
                           {% endfor %}
-                      {% endif %}
-                    </div>
-            
-                  </div>
+                      {% endif %} 
+                    </div> -->
+                    {% comment %} <div class="message"> {% endcomment %}
                   <form
                     
                     class="contact-form-wrapper"
