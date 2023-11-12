@@ -85,7 +85,7 @@
                     <img class="sticky-img" src="{% static 'assets/img/logo.png' %}" alt="Logo" />
                   </a>
                 </div>
-                <ul class="main-menu">c
+                <ul class="main-menu">
                   <li class="active">
                     <a class="main-menu-link" href="/">Home</a>
                   </li>
@@ -119,7 +119,26 @@
                   </li>
 
                 </ul>
+                {% if user.is_authenticated  %}
+                <ul class="main-menu">
+                  <li>
+                    <a class="main-menu-link" style="color: white;" href="#">{{ request.user.username }}</a>
+                      <ul class="sub-menu">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+
+                        {% for lang in languages %}
+                          <li>
+                            <a class="sub-menu-link" href="/{{ lang.code }}/"> {{ lang.name_local }} ({{ lang.code }})</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                  </li>
+                </ul>
+                {% else %}
                 <a href="get-started.html" class="book-now-btn" style="border-radius: 5px; padding-top: 10px; padding-bottom: 10px;padding-left: 13px; padding-right: 13px;">Get Started</a>
+                {% endif %}
                 <!-- <a href="#" class="book-now-btn" style="border-radius: 5px; padding: 10px; margin-left: 50px;">Login</a>
               </div> -->
             </div>
@@ -347,7 +366,7 @@
             <div class="header-top-offcanvas">
               <p>
                 <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
-                <a href="login.html" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px; border-color: #008000;">Sign In</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px; border-color: #008000;">Sign In</a>
               </p>
             </div>
           </div>
