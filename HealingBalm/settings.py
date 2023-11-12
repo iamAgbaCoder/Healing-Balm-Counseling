@@ -43,19 +43,21 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # install apps
     "web",
+    'rosetta', 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    
+    # Multilingual Feature 
+    'django.middleware.locale.LocaleMiddleware',
+    
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
-    # Multilingual Feature 
-    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'HealingBalm.urls'

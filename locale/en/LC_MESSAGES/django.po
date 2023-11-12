@@ -9,33 +9,26 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-11 20:54+0100\n"
-"PO-Revision-Date: 2023-11-11 21:19+0000\n"
-"Last-Translator:   <hi.agbacoder@gmail.com>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Translated-Using: django-rosetta 0.9.9\n"
-
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 #: .\HealingBalm\settings.py:129
-#, fuzzy
 msgid "English"
-msgstr "Discover the ideal therapist tailored to your needs"
+msgstr ""
 
 #: .\HealingBalm\settings.py:130
-#, fuzzy
 msgid "French"
-msgstr "Découvrez le thérapeute idéal adapté à vos besoins"
+msgstr ""
 
 #: .\HealingBalm\urls.py:29
 msgid "admin/"
 msgstr ""
 
 #: .\webpages\index.html:132
-#, fuzzy
 msgid "Schedule a session that fits your schedule and needs."
 msgstr ""
-"Planifiez une séance qui correspond à votre emploi du temps et à vos "
-"besoins."
