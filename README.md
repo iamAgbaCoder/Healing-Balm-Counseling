@@ -1,21 +1,21 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="HealingBalm" />
+  <img src="static\assets\img\healing.png" alt="HealingBalm" />
 
   &#xa0;
 
-  <!-- <a href="https://healingbalm.netlify.app">Demo</a> -->
+  <a href="https://healingbalm.pythonanywhere.com">Demo</a>
 </div>
 
 <h1 align="center">HealingBalm</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/healingbalm?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/iamAgbaCoder/healingbalm?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/healingbalm?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/iamAgbaCoder/healingbalm?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/healingbalm?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/iamAgbaCoder/healingbalm?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/healingbalm?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/iamAgbaCoder/healingbalm?color=56BEB8">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/healingbalm?color=56BEB8" /> -->
 
@@ -24,13 +24,13 @@
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/healingbalm?color=56BEB8" /> -->
 </p>
 
-<!-- Status -->
+Status
 
-<!-- <h4 align="center"> 
+<h4 align="center"> 
 	🚧  HealingBalm 🚀 Under construction...  🚧
 </h4> 
 
-<hr> -->
+<hr> 
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -39,7 +39,7 @@
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="https://github.com/iamAgbaCoder" target="_blank">Author</a>
 </p>
 
 <br>
