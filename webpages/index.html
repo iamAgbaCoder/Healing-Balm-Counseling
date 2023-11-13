@@ -68,8 +68,8 @@
                         Your Health Is
                         <span class="d-block">Our Priority</span>
                       </h2>
-                      <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
-                      <a href="#feature" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Sign In</a>
+                      <a href="{% url 'onboarding' %}" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Matched to a Therapist</a>
+                      <a href="{% url 'login' %}" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Sign In</a>
                     </div>
                   </div>
                 </div>
@@ -89,8 +89,8 @@
                         Empowering Lives through Compassionate
                         <span class="d-block"> Counseling</span>
                       </h2>
-                      <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
-                      <a href="#" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Sign In</a>
+                      <a href="{% url 'onboarding' %}" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
+                      <a href="{% url 'login' %}" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Sign In</a>
                     </div>
                   </div>
                 </div>
@@ -193,7 +193,7 @@
             <div class="col-lg-3 col-6 stats_info counter_grid">
               <span class="icofont-users" style="font-size: 70px; text-align: center; color:#008000;"></span>
               <p class="counter" style="font-size: 50px">1100</p>
-              <h4>Expert <span style="color:#008000;">Counsellors</span></h4>
+              <h4>Certified <span style="color:#008000;">Therapists.</span></h4>
             </div>
             <div class="col-lg-3 col-6 stats_info counter_grid1">
               <span class="icofont-laptop" style="font-size: 70px; color:#008000;"></span>
@@ -453,7 +453,7 @@
                       <div class="col-md-12 text-center">
                         <div class="form-group mb-0">
                           <button class="btn btn-theme btn-block" type="submit">
-                            Book Appointment &rarr;
+                            Get Matched to a Therapist &rarr;
                           </button>
                         </div>
                       </div>
@@ -477,7 +477,7 @@
             <div class="col-lg-12">
               <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
                 <p>Testimonies</p>
-                <h2 class="title"><span>A Success</span> Story</h2>
+                <h2 class="title"><span>Success</span> Stories</h2>
               </div>
             </div>
           </div>
@@ -596,7 +596,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="section-title mt-md-70" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="title"><span>FAQs</span></h2>
+                <h2 class="title"><span>Frequently asked questions (FAQs)</span></h2>
               </div>
               <div class="accordian-content" data-aos="fade-up" data-aos-duration="1100">
                 <div class="accordion accordion-style2 no-bg" id="accordionStyle">
@@ -604,7 +604,7 @@
                     <div class="accordion-header" id="headingOne">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Can I Get A Divorce Without A Consultant?
+                        Who constitutes the therapists?
                         <i class="icon icon-plus icofont-thin-down"></i>
                         <i class="icon icon-minus icofont-close-line"></i>
                       </button>
@@ -612,12 +612,36 @@
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                       data-bs-parent="#accordionStyle">
                       <div class="accordion-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Curabitur consectetur elit lacinia ornare. In
-                        volutpat rutrum molestie. Vivamus efficitur orci, ac
-                        gravida eros bibendum non. Nullam auctor varius fer
-                        vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices.
+                        Therapists on HealingBalm are certified, trained, and 
+                        experienced Practitioner Psychologists, Counsellors, or 
+                        professionals with similar applicable recognized certifications. 
+                        These therapists are mandated to have a pertinent academic 
+                        degree in their field, a minimum of 3 years of experience, 
+                        and must be qualified and credentialed by their respective 
+                        professional organization. This recognition comes after 
+                        successfully completing the required education, exams, 
+                        training, practical experience, and ongoing supervision 
+                        requirements.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How long can I use Healing Balm?
+                        <i class="icon icon-plus icofont-thin-down"></i>
+                        <i class="icon icon-minus icofont-close-line"></i>
+                      </button>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                      data-bs-parent="#accordionStyle">
+                      <div class="accordion-body">
+                        The timeframe for experiencing benefits varies 
+                        widely from person to person, depending on individual 
+                        preferences and needs. Some find substantial value within 
+                        a few weeks, while others opt for a more prolonged engagement 
+                        with the program. The choice is entirely yours.
                       </div>
                     </div>
                   </div>
@@ -625,8 +649,7 @@
                     <div class="accordion-header" id="headingTwo">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        I Have A Technical Problem Or Support Issue I Need
-                        Resolved, Who Do I Email?
+                        What methods can I use to connect with my therapist?
                         <i class="icon icon-plus icofont-thin-down"></i>
                         <i class="icon icon-minus icofont-close-line"></i>
                       </button>
@@ -634,12 +657,17 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                       data-bs-parent="#accordionStyle">
                       <div class="accordion-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Curabitur consectetur elit lacinia ornare. In
-                        volutpat rutrum molestie. Vivamus efficitur orci, ac
-                        gravida eros bibendum non. Nullam auctor varius fer
-                        vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices.
+                        You have multiple communication options to connect with your therapist:
+                        <br/>
+                        1. <strong style="color: #008000">Messaging:</strong> Exchange messages with your therapist through a secure platform.
+                        <br/>
+                        2. <strong style="color: #008000">Live Chat:</strong> Engage in real-time conversations with your therapist via chat.
+                        <br/>
+                        3. <strong style="color: #008000">Phone Calls:</strong> Communicate with your therapist over the phone.
+                        <br/>
+                        4. <strong style="color: #008000">Video Conferencing:</strong> Have face-to-face sessions with your therapist through video calls.
+
+                        The choice of communication method is flexible, allowing you to select the option that aligns best with your preferences, comfort, and scheduling constraints.
                       </div>
                     </div>
                   </div>
@@ -647,7 +675,7 @@
                     <div class="accordion-header" id="headingThree">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        What Other Services Are You Compatible With?
+                        Upon completing the registration process, how much time does it take to be paired with a therapist?
                         <i class="icon icon-plus icofont-thin-down"></i>
                         <i class="icon icon-minus icofont-close-line"></i>
                       </button>
@@ -655,12 +683,7 @@
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                       data-bs-parent="#accordionStyle">
                       <div class="accordion-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Curabitur consectetur elit lacinia ornare. In
-                        volutpat rutrum molestie. Vivamus efficitur orci, ac
-                        gravida eros bibendum non. Nullam auctor varius fer
-                        vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices.
+                        Typically, the matching process occurs within 24 hours or sooner in most instances.
                       </div>
                     </div>
                   </div>
@@ -668,7 +691,7 @@
                     <div class="accordion-header" id="headingFour">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Are You Hiring?
+                        Who will be assisting me?
                         <i class="icon icon-plus icofont-thin-down"></i>
                         <i class="icon icon-minus icofont-close-line"></i>
                       </button>
@@ -676,17 +699,20 @@
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                       data-bs-parent="#accordionStyle">
                       <div class="accordion-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Curabitur consectetur elit lacinia ornare. In
-                        volutpat rutrum molestie. Vivamus efficitur orci, ac
-                        gravida eros bibendum non. Nullam auctor varius fer
-                        vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices.
+                        Upon your registration, we will pair you with an accessible
+                        therapist tailored to your goals, preferences, and the specific 
+                        challenges you are facing. Since therapists vary in their 
+                        approaches and areas of expertise, finding the most 
+                        suitable match is crucial for optimal results. We are 
+                        generally successful in achieving successful matches; nevertheless, 
+                        if you initiate the process and find that your assigned 
+                        therapist isn't the right fit, you have the option to 
+                        request a switch to a different therapist.
                       </div>
                     </div>
                   </div>
                 </div>
-                <a class="btn-line" href="#/">View All Questions</a>
+                <a class="btn-line" href="{% url 'onboarding' %}">Get matched to a therapist</a>
               </div>
             </div>
           </div>

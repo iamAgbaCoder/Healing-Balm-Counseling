@@ -25,6 +25,9 @@
   <!--== Main Style CSS ==-->
   <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+  {% block css %}
+  
+  {% endblock css %}
 </head>
 
 <body>
@@ -122,25 +125,25 @@
                 {% if user.is_authenticated  %}
                 <ul class="main-menu">
                   <li>
-                    <a class="main-menu-link" style="color: white;" href="#">{{ request.user.username }}</a>
+                    <a class="main-menu-link" style="color: white;" href="#"> <i class="bi bi-person" style="color: white; font-size: 20px; text-transform: lowercase;"></i> {{ request.user.get_full_name|lower }}</a>
                       <ul class="sub-menu">
-                        {% get_current_language as LANGUAGE_CODE %}
-                        {% get_available_languages as LANGUAGES %}
-                        {% get_language_info_list for LANGUAGES as languages %}
-
-                        {% for lang in languages %}
                           <li>
-                            <a class="sub-menu-link" href="/{{ lang.code }}/"> {{ lang.name_local }} ({{ lang.code }})</a>
+                            <a class="sub-menu-link" href=""> Profile </a>
                           </li>
-                        {% endfor %}
+                          <li>
+                            <a class="sub-menu-link" href=""> Logout </a>
+                          </li>
+                          <li>
+                            <a class="sub-menu-link" href=""> Logout </a>
+                          </li>
                       </ul>
                   </li>
                 </ul>
                 {% else %}
                 <a href="get-started.html" class="book-now-btn" style="border-radius: 5px; padding-top: 10px; padding-bottom: 10px;padding-left: 13px; padding-right: 13px;">Get Started</a>
                 {% endif %}
-                <!-- <a href="#" class="book-now-btn" style="border-radius: 5px; padding: 10px; margin-left: 50px;">Login</a>
-              </div> -->
+                <!-- <a href="#" class="book-now-btn" style="border-radius: 5px; padding: 10px; margin-left: 50px;">Login</a> -->
+              </div>
             </div>
           </div>
         </div>
@@ -186,7 +189,26 @@
                   </li>
 
                 </ul>
-                <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;"><strong>GET STARTED</strong></a>
+                {% if user.is_authenticated  %}
+                <ul class="main-menu">
+                  <li>
+                    <a class="main-menu-link" style="" href="#"> <i class="bi bi-person" style="color: #008000#ck; font-size: 20px; text-transform: lowercase;"></i> {{ request.user.get_full_name|lower }}</a>
+                      <ul class="sub-menu">
+                          <li>
+                            <a class="sub-menu-link" href=""> Profile </a>
+                          </li>
+                          <li>
+                            <a class="sub-menu-link" href=""> Logout </a>
+                          </li>
+                          <li>
+                            <a class="sub-menu-link" href="{% url 'logout' %}"> Logout </a>
+                          </li>
+                      </ul>
+                  </li>
+                </ul>
+                {% else %}
+                <a href="get-started.html" class="book-now-btn" style="border-radius: 5px; padding-top: 10px; padding-bottom: 10px;padding-left: 13px; padding-right: 13px;">Get Started</a>
+                {% endif %}
                 <!-- <a href="#" class="book-now-btn">Login</a> -->
               </div>
             </div>
@@ -255,7 +277,7 @@
             </div>
             <div class="col-sm-6 col-md-6 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 d-lg-none d-xl-block">
               <div class="widget-item d-inline-block">
-                <h4 class="widget-title line-bottom">Popular Tags</h4>
+                <h4 class="widget-title line-bottom">Popular Cases</h4>
                 <div class="widget-tags">
                   <ul>
                     <li><a href="#/">Teens</a></li>
@@ -364,10 +386,18 @@
           </div>
           <div class="offcanvas-head mb-3">
             <div class="header-top-offcanvas">
-              <p>
-                <a href="get-started.html" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
+            {% if user.is_authenticated == False %}
+               <p>
+                <a href="{% url 'onboarding' %}" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Get Started</a>
                 <a href="{% url 'login' %}" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px; border-color: #008000;">Sign In</a>
               </p>
+            {% else %}
+               <p>
+                <a href="{% url 'profile' username=user.username %}" class="btn btn-outline-secondary animated delay2" style="font-family: 'Poppins', sans-serif; border-radius: 7px; border-color: #008000;">{{ request.user.get_full_name|lower }}</a>
+                <a href="{% url "logout" %}" class="btn btn-danger me-3 animated delay1" style="font-family: 'Poppins', sans-serif; border-radius: 7px;">Logout</a>
+              </p>
+            {% endif %}
+             
             </div>
           </div>
           <nav class="offcanvas-menu">
@@ -508,6 +538,7 @@
 
     <!--=== Custom Js ===-->
     <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/custom/script.js' %}"></script>
   </body>
   
   </html>

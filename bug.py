@@ -1,22 +1,26 @@
-from django.shortcuts import render, redirect, HttpResponse, get_object_or_404, HttpResponseRedirect
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
-from django.contrib import auth
-# from django.contrib import logout
-from django.contrib import messages
+# settings.py
+LOGIN_URL = '/auth/signin/'
+LOGIN_REDIRECT_URL = 'profile'
+LOGOUT_URL = '/logout/'
+LOGOUT_REDIRECT_URL = '/' 
 
-# Create your views here.
+# urls.py
+urlpatterns = [
+    path("signin/", views.login, name="login"),
+    path("onboarding/", views.onboarding, name="onboarding"),
+    path("logout/", views.logout, name="logout"),
+    path("profile/@<str:username>", views.profile, name="profile"),
+]
 
-@login_required
+
+# views.py 
+@login_required # User profile view
 def profile(request, username):
     user = get_object_or_404(User, username=username)
     return HttpResponse(f"Hello {user}")
 
 
-def onboarding(request):
-    return render(request, "authentication/get-started.html")
-
-def login(request):
+def login(request): # login view
 
     if request.method == "GET":
         request.session["login_from"] = request.META.get('HTTP_REFERER', '/')
@@ -38,7 +42,10 @@ def login(request):
 
     return render (request, "authentication/login.html")
 
+# these blocks of codes are created to redirect users to pages restricted
+# to unauthenticated users. Users are first authenticated and 
+# then directed to the page using this URL path below 
+# http://127.0.0.1:8000/auth/signin/?next=/en/auth/profile/johndoe
 
-def logout(request):
-    auth.logout(request)
-    return redirect("/")
+# but it's not working, help! 😫😭
+# Tech is HARD!! 😭😭😭
