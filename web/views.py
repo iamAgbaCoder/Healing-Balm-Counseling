@@ -9,6 +9,23 @@ import requests
 # fetch db tables from database  
 from .models import *
 
+from django.core.mail import send_mail, BadHeaderError
+from django.conf import settings
+from smtplib import SMTPException
+import smtplib
+
+import socket 
+
+from django.contrib.sites.shortcuts import get_current_site
+
+# send_mail(
+#     'Subject here',
+#     'Here is the message.',
+#     'from@example.com',
+#     ['to@example.com'],
+#     fail_silently=False,
+# )
+
 # Create your views here.
 
 # fetchs all data in Database Models(DB Table)
@@ -31,7 +48,8 @@ def switch_language(request, language_code):
 
 
 def homepage(request):    
-    
+
+    context = {"testimonies": testimony, "counsellors": counsellor} # pass data from database to frontend 
     user_language = request.META.get('HTTP_ACCEPT_LANGUAGE', '').split(',')[0]
     print(user_language)
     
@@ -52,14 +70,27 @@ def homepage(request):
                 return render(request, "index.html", context)
                 
         appointment = Appointment.objects.create(name=name, email=email, gender=gender, phone=phone, challenge=challenge, age_range=age_range, date_of_appointment=date_of_appointment)   
-        appointment.save();
+
+        subject=f"[APPOINTMENT REQUEST ALERT] Counselling Appointment Booking from {name}"
+        message=f"Name: {name}\nEmail: {email}\nGender: {gender}\nPhone: {phone}\nAge Range: {age_range}\nChallenge Facing: {challenge}\nDesired Date of Appointment: {date_of_appointment}"
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = [email, from_email]
+
+        try:
+            send_mail( subject, message, from_email, recipient_list, fail_silently=False)
+            appointment.save();
+        except BadHeaderError as e:
+            messages.error(request, "Oops! An Error Occurred {e}. Please Try Again")
+
+
+        print(recipient_list)
+        print("sent")
         
         # show_toast = "Your request has been received and processed successfully. Please check your mail for further instructions. Thank you✅"
         messages.success(request, "Your request has been received and processed successfully. Please check your mail for further instructions. Thank you✅")
         # context = {"show_toast": show_toast}
         return render(request, "index.html",  context)
         
-    context = {"testimonies": testimony, "counsellors": counsellor} # pass data from database to frontend 
     return render(request, "index.html", context)
 
 def about_us(request):
@@ -67,6 +98,34 @@ def about_us(request):
     return render(request, "about.html", context)
 
 def contact_us(request):
+    
+    site = get_current_site(request)
+    print(site)
+
+    if request.method == "POST":
+        name = request.POST["name"]
+        email = request.POST["email"]
+        contact_subject = request.POST["subject"]
+        contact_message = request.POST["message"]
+
+        if contact_subject == "":
+            subject = f"[MESSAGE ALERT FROM YOUR WEBSITE - {site}]"
+        else:
+            subject = f"[MESSAGE ALERT FROM YOUR WEBSITE - {site}] {contact_subject}"
+        
+        message = f"Name: {name}\n\nMessage: {contact_message}"
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = [email, from_email]
+
+        try:
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            messages.success(request, "Your request has been received and processed successfully. Please check your mail for further instructions. Thank you✅")
+        except (BadHeaderError, SMTPException) as e:
+            if isinstance(e.args[0], socket.gaierror):
+                messages.error(request, "Oops! Hostname cannot be resolved. Please Try Again Later")
+            messages.error(request, "Oops! An error occured {e}. Please Try Again")
+            return redirect("contact")
+
     return render(request, "contact.html")
 
 

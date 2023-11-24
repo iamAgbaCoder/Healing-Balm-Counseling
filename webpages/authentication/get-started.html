@@ -8,14 +8,17 @@
 {% block content %}
 
 <section class="contact-area">
-        <br/>
-        <br/>
         <div class="container">
           <div class="row">
+            <h1 class="text-center">Help us to match you with the <span  style="color: #008000;">right therapist.</span></h1>
             <div class="col-lg-12">
+              <p class="text-center" style="color:black;">Please fill out this questionnaire to provide some background information about you and the 
+              issues you'd like to deal with in therapy. It would help us match you with the most suitable therapist for you. Your
+              answers will give this therapist a good starting point in getting to know you.
+              </p>
               <div class="contact-form">
                 <form action="#" class="form">
-                  <!-- <h1 class="text-center">Registration Form</h1> -->
+                  {% comment %} <h1 class="text-center">Registration Form</h1> {% endcomment %}
                   <!-- Progress bar -->
                   <div class="progressbar">
                       <div class="progress" id="progress"></div>
@@ -26,11 +29,12 @@
                       <div class="progress-step"></div>
                       <div class="progress-step"></div>
                       <div class="progress-step"></div>
+                      {% comment %} <div class="progress-step"></div> {% endcomment %}
                   </div>
           
                   <!-- Steps -->
                   <div class="form-step form-step-active">
-                      <h4>What is your gender identity?</h4>
+                      <h4>How do you identify?</h4>
                       <div class="input-group">
                           <input type="radio" id="male Green" name="gender" value="male">
                           <label for="male">Male</label>
@@ -39,10 +43,49 @@
                           <input type="radio" id="female Green" name="gender" value="female">
                           <label for="female">Female</label>
                       </div>
+                      <div class="input-group">
+                          <input type="radio" id="female Green" name="gender" value="lesbian">
+                          <label for="female">Lesbian</label>
+                      </div>
+                      <div class="input-group">
+                          <input type="radio" id="female Green" name="gender" value="gay">
+                          <label for="female">Gay</label>
+                      </div>
+                      <div class="input-group">
+                          <input type="radio" id="female Green" name="gender" value="bi/pa">
+                          <label for="female">Bi or Pan </label>
+                      </div>
+                      <div class="input-group">
+                          <input type="radio" id="female Green" name="gender" value="custom">
+                          <label for="female">Prefer not to say</label>
+                      </div>
                       <div class="">
                           <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
                       </div>
-                  </div>
+                  {% comment %} </div>
+                  <div class="form-step">
+                      <h4>What is your relationship status?</h4>
+                      <div class="input-group">
+                          <input type="radio" id="Single" name="relationship" value="Single">
+                          <label for="relationship">Single</label>
+                      </div>
+                      <div class="input-group">
+                          <input type="radio" id="In a relationship" name="relationship" value="In a relationship">
+                          <label for="relationship">In a relationship</label>
+                      </div>
+                      <div class="input-group">
+                          <input type="radio" id="Married" name="relationship" value="Married">
+                          <label for="relationship">Married</label>
+                      </div>
+                      <div class="input-group">
+                          <input type="radio" id="Divorced" name="relationship" value="Divorced">
+                          <label for="relationship">Divorced</label>
+                      </div>
+                      <div class="btns-group">
+                          <a href="#" class="btn btn-prev">Previous</a>
+                          <a href="#" class="btn btn-next">Next</a>
+                      </div>
+                  </div> {% endcomment %}
                   <div class="form-step">
                       <h4>How old are you?</h4>
                       <select name="age" id="age">

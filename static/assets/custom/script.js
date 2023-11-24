@@ -56,7 +56,7 @@ function validateFormStep(step) {
     if (!selectedGender) {
       alert("Please select your gender.");
       return false;
-    }
+    } 
   } else if (step === 1) {
     const selectedAge = document.getElementById('age').value;
     if (selectedAge === 'select age') {

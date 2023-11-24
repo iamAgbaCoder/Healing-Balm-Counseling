@@ -1,11 +1,24 @@
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+# from django.contrib.auth.models.user import user
 from django.contrib import auth
 # from django.contrib import logout
 from django.contrib import messages
 
 # Create your views here.
+
+# from django.core.mail import send_mail
+
+# send_mail(
+#     'Subject here',
+#     'Here is the message.',
+#     'from@example.com',
+#     ['to@example.com'],
+#     fail_silently=False,
+# )
+
+
 
 @login_required
 def profile(request, username):
@@ -35,6 +48,9 @@ def login(request):
         else:
             messages.error(request, "Incorrect Password/Username. Please check your credentials and try again!")
             return render(request, 'authentication/login.html')
+    else:
+        if request.user.is_authenticated == True:
+            return redirect("home")
 
     return render (request, "authentication/login.html")
 

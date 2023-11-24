@@ -33,7 +33,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path("", include("web.urls")),
-    path('auth/', include("authentication.urls")),
+    path('auth/v1/', include("authentication.urls")),
 )
 
 if 'rosetta' in settings.INSTALLED_APPS:

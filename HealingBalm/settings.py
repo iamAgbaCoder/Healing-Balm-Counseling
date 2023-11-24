@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os 
+from decouple import config
 
 # from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import gettext_lazy as _
@@ -27,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q5o7cs=e-()7+58g5cejy6ba9c*36%=a3jw-m^8#n=ngc%+3r1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
@@ -112,10 +113,18 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LOGIN_URL = '/auth/signin/'
+LOGIN_URL = '/auth/signin/v1/'
 # LOGIN_REDIRECT_URL = 'profile'
 # LOGOUT_URL = '/logout/'
 # LOGOUT_REDIRECT_URL = '/' #'auth/login/?next=/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_SSL = config("EMAIL_USE_TLS", cast=bool)
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_PORT = config("EMAIL_PORT", cast=int)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 
 
 # Internationalization

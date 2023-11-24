@@ -59,19 +59,37 @@
                       <span> We Alway Ready</span> To Help Your
                     </h2>
                   </div>
+                  <div class="container">
+                    {% if messages %}
+                        {% for message in messages %}
+                        {% if message.tags == "error" %}
+                        <div class="alert alert-danger" role="alert">
+                        {% else %}
+                        <div class="alert alert-{{ message.tags }}" role="alert">
+                        {% endif %}
+                          <button type='button' style="margin-left: 95%;" class='btn-close' data-bs-dismiss='alert'></button>
+                          {% comment %} <h4 class="alert-heading">Book Appointment</h4> {% endcomment %}
+                          <p>{{message}}.</p>
+                          <hr>
+                          <p class="mb-0"><strong>RCCG Healing Balm Team.</strongbhz></p>
+                        </div>
+                        {% endfor %}
+                    {% endif %} 
+                  </div>
                   <form
                     class="contact-form-wrapper"
                     id="contact-form"
-                    action=""
+                    action="{% url "contact" %}"
                     method="post"
                   >
+                    {% csrf_token %}
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group">
                           <input
                             class="form-control"
                             type="text"
-                            name="con_name"
+                            name="name"
                             placeholder="Your Name"
                           />
                         </div>
@@ -81,7 +99,7 @@
                           <input
                             class="form-control"
                             type="email"
-                            name="con_email"
+                            name="email"
                             placeholder="Email Address"
                           />
                         </div>
@@ -91,7 +109,7 @@
                           <input
                             class="form-control"
                             type="text"
-                            name="con_subject"
+                            name="subject"
                             placeholder="Subject (optional)"
                           />
                         </div>
@@ -99,7 +117,7 @@
                       <div class="col-md-12">
                         <div class="form-group mb-0">
                           <textarea
-                            name="con_message"
+                            name="message"
                             rows="5"
                             placeholder="Write your message here"
                           ></textarea>
